@@ -1,0 +1,22 @@
+//Задача 10: Напишите программу, которая принимает на вход трёхзначное число и на выходе показывает вторую цифру этого числа.
+
+int number = 0;
+int stop = 0;
+while (stop == 0)
+{ 
+Console.WriteLine("Введите трехзначное число!");
+number = int.Parse(Console.ReadLine());
+
+if ((number > 99) && (number < 1000))
+{
+    stop = 1;
+}
+else
+{
+    Console.WriteLine("число не трехзначное!");
+}
+}
+
+int SecondNumber = (number / 10) % 10;
+
+Console.WriteLine($"Вторая цифра чилса {number} - {SecondNumber}");
